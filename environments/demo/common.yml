@@ -44,7 +44,7 @@ services:
 
   gateway:
     hostname: demo-gateway
-    image: graviteeio/gateway:latest
+    image: graviteeio/gateway:1.15.5
     environment:
       - gravitee_management_mongodb_uri=mongodb://mongodb:27017/gravitee?serverSelectionTimeoutMS=5000&connectTimeoutMS=5000&socketTimeoutMS=5000
       - gravitee_ratelimit_mongodb_uri=mongodb://mongodb:27017/gravitee?serverSelectionTimeoutMS=5000&connectTimeoutMS=5000&socketTimeoutMS=5000
@@ -52,11 +52,11 @@ services:
 
   managementui:
     hostname: demo-managementui
-    image: graviteeio/management-ui:latest
+    image: graviteeio/management-ui:1.15.5
 
   managementapi:
     hostname: demo-managementapi
-    image: graviteeio/management-api:latest
+    image: graviteeio/management-api:1.15.5
     environment:
       - gravitee_management_mongodb_uri=mongodb://mongodb:27017/gravitee?serverSelectionTimeoutMS=5000&connectTimeoutMS=5000&socketTimeoutMS=5000
       - gravitee_analytics_elasticsearch_endpoints_0=http://elasticsearch:9200
